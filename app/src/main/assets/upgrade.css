@@ -1,0 +1,150 @@
+#upgrademenu {
+    display: flex;
+    position: absolute;
+
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(253, 253, 253, 0.276);
+}
+
+#upgrademenucontainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
+
+#upgrademenu2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+    background: #0083BF;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.upgraderow {
+    flex: 1;
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: grid;
+    row-gap: 2vmin;
+    column-gap: 2vmin;
+    grid-template-areas:
+        'level level title title title'
+        'image image desc desc desc'
+        'image image button button button';
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    color: white;
+}
+
+#finishupgrade {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0;
+}
+
+#upgradefinish {
+    background: black;
+    flex: 0.8;
+    height: 50%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upgradelvl {
+    grid-area: level;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+.upgradebutton {
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upgradetitle {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+.upgradebutton {
+    height: 75%;
+    width: 90%;
+    background: #3FAE49;
+    border-radius: 25px;
+}
+
+.upgradeimg {
+    grid-area: image;
+}
+
+#furnaceupgrade .upgradeimg {
+    background: url("/assets/images/furnace.png") no-repeat center;
+    background-size: contain;
+}
+
+#clawupgrade .upgradeimg {
+    background: url("/assets/images/claw.svg") no-repeat center;
+    background-size: contain;
+}
+
+#conveyorupgrade .upgradeimg {
+    background: url("/assets/images/conveyor.svg") no-repeat center;
+    background-size: contain;
+
+}
+
+
+.upgradedesc {
+    display: flex;
+    grid-area: desc;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#upgradecontainer {
+    display: flex;
+    flex: 0.9;
+    width: 100%;
+    height: 100%;
+}
+
+.space {
+    flex: 0.1;
+}
+
+.hide {
+    display: none !important;
+
+}
+
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.verticle {
+    flex-direction: column;
+}

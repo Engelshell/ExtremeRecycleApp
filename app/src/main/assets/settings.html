@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="settingsmenu">
+    <div class="backgroundimage"></div>
+    <div class="space"></div>
+    <div class="logotitle">
+        <h1>Settings</h1>
+    </div>
+    <div class="space"></div>
+    <main>
+        <div id="settingscontain">
+            <div class="space"></div>
+            <div class="setting" id="setting0">
+                <div class="settingname">Volume</div>
+                <input type="range" step="0.05" min="0" max="1" value="0.6" id="volumeRange">
+            </div>
+            <div class="space"></div>
+            <a class="setting" id="returnbuttonsettings" href="./index.html">Return</a>
+        </div>
+
+    </main>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <script defer type="text/javascript">
+        async function main() {
+            const volumeRange = document.querySelector("#volumeRange");
+            volumeRange.value = parseFloat(localStorage.getItem("volume"));
+            volumeRange.addEventListener("input", (e) => {
+                localStorage.setItem("volume", volumeRange.value);
+            });
+            
+           
+        }
+        main();
+       
+
+    </script>
+</body>
+
+</html>

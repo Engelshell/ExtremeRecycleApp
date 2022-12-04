@@ -1,0 +1,53 @@
+#pausemenu {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background: rgba(0, 0, 0, 0.774);
+    flex-direction: column;
+}
+
+#pausemenucontainer {
+    position: relative;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#pausemenuhorizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+
+
+}
+
+#pausecontent {
+    display: flex;
+    flex: 1;
+    height: 100%;
+
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+#pausecontent a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.1;
+    width: 100%;
+    background-color: #3FAE49;
+    border-radius: 20px;
+    font-size: 1em;
+    color: white;
+
+}

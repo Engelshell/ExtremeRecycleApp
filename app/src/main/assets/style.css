@@ -1,0 +1,189 @@
+* {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+html {
+    min-height:100%;
+    width:100%;
+    display: flex;
+}
+
+body {
+    min-height:100%;
+}
+
+#nameinput {
+    flex:0.5;
+    font-size:1.25em;
+    color:red;
+    text-align:center;
+    border-radius:20px;
+}
+#nameinput::placeholder {
+    text-align:center;
+    font-size:1.25em;
+    color:red;
+}
+.greyout {
+    background-color:gray !important;
+}
+
+#startmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: space-around;
+    max-width: 100%;
+    flex: 1;
+    background-color:rgb(0, 21, 44);
+    font-size:1em;
+
+}
+
+#startmenu .backgroundimage {
+    position: fixed;
+    z-index: -1;
+    left: -300;
+    animation: rotation 30s infinite linear;
+    background: url("/assets/images/recycleSymbol.svg") no-repeat center;
+    width: 300%;
+    height: 300%;
+
+}
+
+#startmenu .logo {
+    flex: 1.5;
+    fill:purple;
+    background: url("/assets/images/recycleSymboPurple.svg") no-repeat center;
+}
+
+#startmenu .logotitle {
+    display: flex;
+    flex: 0.7;
+    font-size:0.8em;
+    color: red;
+    justify-content: center;
+}
+
+#startmenu .space {
+    flex: 0.25;
+}
+
+#startmenu main {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+
+}
+
+#startmenu .options {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+#startmenu main a {
+    flex: 0.5;
+    display: flex;
+    background-color: #1e7145;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.5em;
+}
+
+#startmenu main a.space {
+    background-color: transparent;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+
+#settingsmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: space-around;
+    max-width: 100%;
+    flex: 1;
+    background-color:rgb(0, 21, 44);
+    font-size:1em;
+}
+#settingsmenu .backgroundimage {
+    position: fixed;
+    z-index: -1;
+    left: -300;
+    animation: rotation 30s infinite linear;
+    background: url("/assets/images/recycleSymbol.svg") no-repeat center;
+    width: 300%;
+    height: 300%;
+
+}
+
+#settingscontain {
+    flex:0.75;
+    display:flex;
+    flex-direction: column;
+}
+#returnbuttonsettings {
+    background:#3FAE49;
+    border-radius:20px;
+    width:100%;
+}
+.setting {
+    flex:0.1;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    font-size:1.25em;
+    color:white;
+    background:#3FAE49;
+    border-radius:20px;
+    padding:1em;
+}
+.settingname {
+    margin:1em;
+}
+.setting input {
+    width:100%;
+    
+}
+
+#settingsmenu .logo {
+    flex: 1.5;
+    fill:purple;
+    background: url("/assets/images/recycleSymboPurple.svg") no-repeat center;
+}
+
+#settingsmenu .logotitle {
+    display: flex;
+    flex: 0.7;
+    font-size:0.8em;
+    color: red;
+    justify-content: center;
+}
+
+#settingsmenu .space {
+    flex: 0.25;
+}
+
+#settingsmenu main {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+

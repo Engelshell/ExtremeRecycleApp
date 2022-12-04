@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/game.css">
+    <link rel="stylesheet" href="/assets/upgrade.css">
+    <link rel="stylesheet" href="/assets/pause.css">
+    <link rel="stylesheet" href="/assets/fail.css">
+    <!-- https://github.com/timruffles/mobile-drag-drop -->
+    <link rel="stylesheet" href="libs/mobile-drag-drop/default.css">
+    <script src="/assets/libs/mobile-drag-drop/index.min.js"></script>
+    <!--optional import of scroll behaviour-->
+    <script src="/assets/libs/mobile-drag-drop/scroll-behaviour.min.js"></script>
+    <script>
+        MobileDragDrop.polyfill({
+            dragImageTranslateOverride: MobileDragDrop.scrollBehaviourDragImageTranslateOverride
+        });
+    </script>
+
+</head>
+
+<body id="game">
+    <div id="failmenu" class="hide">
+        <div class="space"></div>
+        <div id="failmenucontainer">
+            <div class="space"></div>
+            <div id="failmenuhorizontal">
+
+                <div id="failcontent">
+                    <div id="failtitle">You Lost</div>
+                    <a id="faillink" href="./scores.html">High Scores</a>
+                    <a id="gamereset" href="./index.html">Reset Game</a>
+
+                </div>
+
+            </div>
+            <div class="space"></div>
+        </div>
+        <div class="space"></div>
+    </div>
+    <div id="pausemenu" class="hide">
+        <div class="space"></div>
+        <div id="pausemenucontainer">
+            <div class="space"></div>
+            <div id="pausemenuhorizontal">
+
+                <div id="pausecontent">
+
+                    <a id="continuelink" href="">Continue</a>
+                    <a id="exitlink" href="./index.html">Return to Menu</a>
+
+                </div>
+
+            </div>
+            <div class="space"></div>
+        </div>
+        <div class="space"></div>
+    </div>
+
+
+    <div id="upgrademenu" class="hide">
+        <div class="space"></div>
+        <div id="upgrademenucontainer" class="flex verticle center">
+
+            <div id="upgradecontainer" class="flex center">
+                <div class="space"></div>
+
+                <div id="upgrademenu2">
+                    <div id="furnaceupgrade" class="upgraderow">
+                        <div class="upgradelvl">0</div>
+                        <div class="upgradeimg"></div>
+                        <div class="upgradetitle">Trash Incinerator</div>
+                        <div class="upgradedesc">1% Chance to remove trash per level.</div>
+                        <div class="upgradebutton">Upgrade 500</div>
+                    </div>
+                    <div id="conveyorupgrade" class="upgraderow">
+                        <div class="upgradelvl">0</div>
+                        <div class="upgradeimg"></div>
+                        <div class="upgradetitle">Conveyor Belts</div>
+                        <div class="upgradedesc">5% Increase time between items per level</div>
+                        <div class="upgradebutton">Upgrade 800</div>
+                    </div>
+                    <div id="clawupgrade" class="upgraderow">
+                        <div class="upgradelvl">0</div>
+                        <div class="upgradeimg"></div>
+                        <div class="upgradetitle">Sorting Claw</div>
+                        <div class="upgradedesc">1% Chance remove any item per level</div>
+                        <div class="upgradebutton">Upgrade 1200</div>
+                    </div>
+                    <div id="finishupgrade" class="upgraderow">
+                        <div id="upgradefinish">Continue</div>
+                    </div>
+                </div>
+
+                <div class="space"></div>
+            </div>
+            <div class="space"></div>
+        </div>
+        <div class="space"></div>
+    </div>
+
+
+
+
+    <div id="maingame" class="">
+        <div id="gamebar">
+            <div id="gbarcontain">
+                <div class="gbar" id="optionsmenu"><a id="menulink" href="#menu"></a></div>
+                <div class="gbar" id="gametime">
+                    <div id="gametimeminutes">00</div>:<div id="gametimeseconds">00</div>:<div
+                        id="gametimemilliseconds">00</div>
+                </div>
+                <div class="gbar" id="level">
+                    <div id="leveltext">Lvl</div>
+                    <div id="levelnum">0</div>
+                </div>
+                <div class="gbar" id="points">
+                    <div id="pointimage"></div>
+                    <div id="pointstext" value="0">0</div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div id="tableitems">
+                <div class="tablecolumn">
+                    <div class="tableitem"><img id="m0" src="" /> </div>
+                    <div class="tableitem"><img id="m1" src="" /></div>
+                    <div class="tableitem"><img id="m2" src="" /></div>
+                </div>
+                <div class="tablecolumn">
+                    <div class="tableitem"><img id="m3" src="" /></div>
+                    <div class="tableitem"><img id="m4" src="" /></div>
+                    <div class="tableitem"><img id="m5" src="" /></div>
+                </div>
+                <div class="tablecolumn">
+                    <div class="tableitem"><img id="m6" src="" /></div>
+                    <div class="tableitem"><img id="m7" src="" /></div>
+                    <div class="tableitem"><img id="m8" src="" /></div>
+                </div>
+
+            </div>
+
+            <!-- <div id="tableitems">
+                <div class="tableitem"><img id="m0" src="" /> </div>
+                <div class="tableitem"><img id="m1" src="" /></div>
+                <div class="tableitem"><img id="m2" src="" /></div>
+                <div class="tableitem"><img id="m3" src="" /></div>
+                <div class="tableitem"><img id="m4" src="" /></div>
+                <div class="tableitem"><img id="m5" src="" /></div>
+                <div class="tableitem"><img id="m6" src="" /></div>
+                <div class="tableitem"><img id="m7" src="" /></div>
+                <div class="tableitem"><img id="m8" src="" /></div>
+            </div> -->
+        </main>
+        <div id="binbar">
+            <div class="bin fade" id="trashbin">
+                <div></div>
+            </div>
+            <div class="bin fade" id="recyclebin">
+                <div></div>
+            </div>
+            <div class="bin fade" id="foodbin">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <script defer src="/assets/game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="startmenu">
+    <div class="backgroundimage"></div>
+    <div class="space"></div>
+    <div class="logotitle">
+        <h1>Extreme Recycle Challenge</h1>
+    </div>
+    <div class="logo"></div>
+    <div class="space"></div>
+    <main>
+        <div class="space"></div>
+
+        <div class="options">
+            <input type="text" placeholder="Enter Your Name" id="nameinput">
+            <a class="space"></a>
+            <a id="startgame" class="greyout" href="#">Start Game</a>
+            <a class="space"></a>
+            <a class="space"></a>
+            <a href="./settings.html">Settings</a>
+            <a class="space"></a>
+            <a id="gamereset" href="">Reset Game</a>
+            <a class="space"></a>
+            <a href="./scores.html">High Scores</a>
+        </div>
+
+        <div class="space"></div>
+    </main>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <script type="text/javascript">
+
+        if(!localStorage.getItem("volume")) {
+            localStorage.setItem("volume", 0.6);
+        }
+        let gameReset = document.querySelector("#gamereset");
+        function resetScore() {
+            let o = {
+                "score0": {
+                    name : "Michael",
+                    score : 9999,
+                },
+                "score1": {
+                    name: "MHam",
+                    score: 5000
+                },
+                "score2": {
+                    name: "Jambo",
+                    score: 3145
+                },
+                "score3": {
+                    name: "CoolRecycler",
+                    score: 1234
+                }
+            };
+            localStorage.setItem("scores", JSON.stringify(o));
+        }
+        if(!localStorage.getItem("scores")) {
+            resetScore();
+        }
+        gameReset.addEventListener("click", (e) => {
+            resetScore();
+            window.location.reload();
+        });
+        resetGame();
+        let musicelem = document.createElement('audio');
+        musicelem.src = "/assets/images/mainmenu.mp3";
+        musicelem.volume =  parseFloat(localStorage.getItem("volume"));
+        musicelem.loop = true;
+        musicelem.play();
+
+        let startGame = document.querySelector("#startgame");
+        let nameInput = document.querySelector("#nameinput");
+        nameInput.addEventListener("input", (e) => {
+            if(nameInput.value.length > 0) {
+                startGame.classList.remove("greyout");
+                localStorage.setItem("name", nameInput.value);
+                startGame.href="./game.html";
+            } else {
+                startGame.classList.add("greyout");
+                startGame.href="#";
+            }
+            console.log(nameInput.value);
+        });
+        
+        function resetGame() {
+            localStorage.setItem("name", "");
+            localStorage.setItem("level", 0);
+            localStorage.setItem("points", 0);
+            localStorage.setItem("conveyorlevel", 0);
+            localStorage.setItem("furnacelevel", 0);
+            localStorage.setItem("clawlevel", 0);
+        }
+
+
+    </script>
+</body>
+
+</html>

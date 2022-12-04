@@ -1,0 +1,239 @@
+html {
+    display: flex;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#game #maingame {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#game #gamebar {
+    display: flex;
+    background-color: #3FAE49;
+    flex: 0.1;
+}
+
+#game #gamebar #gbarcontain {
+    flex: 1;
+    display: flex;
+}
+
+#gamebar .gbar {
+    flex: 1;
+}
+
+#gamebar #optionsmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#optionsmenu #menulink {
+    display: flex;
+    flex: 0.3;
+    background: url("/assets/images/hamburger.svg") no-repeat center;
+    height: 100%;
+}
+
+#gamebar #gametime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    color: red;
+}
+
+#gamebar #level {
+    flex:0.4;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1em;
+    color: white;
+}
+
+#gamebar #points {
+    flex:0.5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2em;
+    color: white;
+}
+
+
+
+#gamebar #points div {
+    flex: 0.4;
+
+}
+
+#gamebar #points #pointimage {
+    display: flex;
+    background: url("/assets/images/recycling-symbol-circle.svg") no-repeat right;
+    height: 70%;
+    flex: 0.5;
+}
+
+#game main {
+    flex:2;
+    background-color: gray;
+    display: flex;
+    overflow:hidden;
+}
+/*
+#tableitems {
+    display: grid;
+    max-width:100%;
+    grid-template-columns: repeat(3, minmax(10px, 100%));
+
+    grid-template-rows: repeat(3, minmax(10px, 100%));
+}*/
+/*
+#game main .tableitem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+}*/
+
+#game #binbar {
+    display: flex;
+    flex: 0.5;
+    height:100%;
+    width:100%;
+    background-color: red;
+    justify-content: space-evenly;
+}
+
+#game #binbar .bin {
+    display: flex;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectedItem {
+    position: fixed;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/*
+.tableitem img {
+    display:block;
+    position:relative;
+    overflow:hidden;
+  
+    height: 100%;
+    animation: fadein 2s;
+}*/
+
+.fade {
+    transition: 0.05s linear all;
+}
+
+.binhighlight {
+    box-shadow: 0 0 25px yellow;
+    transition: box-shadow 0.05s ease-out;
+}
+
+#trashbin {
+    background-color: black;
+}
+
+#trashbin div {
+    flex: 0.6;
+    height: 100%;
+    background: url("/assets/images/trash-symbol.svg") no-repeat center;
+}
+
+#recyclebin {
+    background-color: #0083BF;
+}
+
+#recyclebin div {
+    flex: 0.8;
+    height: 100%;
+    background: url("/assets/images/recycling-symbol.svg") no-repeat center;
+}
+
+#foodbin {
+    background-color: #3FAE49;
+}
+
+#foodbin div { 
+    flex: 0.55;
+    height: 100%;
+    background: url("/assets/images/food-scraps-symbol.svg") no-repeat center;
+    
+}
+
+
+.desertbg {
+    background: url("/assets/images/desert.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.citybg {
+    background: url("/assets/images/city.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.oceanbg {
+    background: url("/assets/images/ocean.jpg") no-repeat center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+#tableitems {
+    display:flex;
+    flex:1;
+}
+
+.tablecolumn {
+    flex:1;
+display:flex;
+flex-direction:column;       
+}
+
+.tableitem {
+    display:flex;
+    flex-flow:row nowrap;
+    flex: 1;
+    object-fit: contain;
+}
+
+.tableitem img {
+    flex:1;
+    height:0;
+  min-height:100%;
+  max-width:100%;
+    flex-flow:row nowrap;
+    display:flex;
+    object-fit: contain;
+    overflow:hidden;
+}

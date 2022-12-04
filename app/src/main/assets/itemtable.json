@@ -1,0 +1,80 @@
+{
+    "chance": {
+        "trash": 40,
+        "recycle": 50,
+        "hazardous": 10
+    },
+    "items": {
+        "trash": {
+            "t0": {
+                "p": 100,
+                "n": "Plastic Bag",
+                "src": "/assets/images/trash/bag.svg"
+            },
+            "t1": {
+                "p": 100,
+                "n": "Chip Bag",
+                "src": "/assets/images/trash/chips.svg"
+            },
+            "t2": {
+                "p": 250,
+                "n": "Plastic Cup",
+                "src": "/assets/images/trash/cup.svg"
+            },
+            "t3": {
+                "p": 300,
+                "n": "Drink Cup",
+                "src": "/assets/images/trash/drink.svg"
+            }
+        },
+        "recycle": {
+            "r0": {
+                "p": 100,
+                "n": "Aluminum Can",
+                "src": "/assets/images/recycle/can.svg"
+            },
+            "r1": {
+                "p": 100,
+                "n": "Cardboard Box",
+                "src": "/assets/images/recycle/cardboard.svg"
+            },
+            "r2": {
+                "p": 100,
+                "n": "Glass Jar",
+                "src": "/assets/images/recycle/glass.svg"
+            },
+            "r3": {
+                "p": 100,
+                "n": "Paper",
+                "src": "/assets/images/recycle/paper.svg"
+            },
+            "r4": {
+                "p": 100,
+                "n": "Yogurt Cup",
+                "src": "/assets/images/recycle/yogurt.svg"
+            }
+        },
+        "food": {
+            "f0": {
+                "p": 100,
+                "n": "Apple",
+                "src": "/assets/images/food/apple.svg"
+            },
+            "f1": {
+                "p": 100,
+                "n": "Bread",
+                "src": "/assets/images/food/bread.svg"
+            },
+            "f2": {
+                "p": 100,
+                "n": "Cheese",
+                "src": "/assets/images/food/cheese.svg"
+            },
+            "f3": {
+                "p": 500,
+                "n": "Pizza Box",
+                "src": "/assets/images/food/pizza.svg"
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./scores.css">
+</head>
+
+<body id="scoremenu">
+    <div class="backgroundimage"></div>
+    <div class="space"></div>
+    <div class="logotitle">
+        <h1>High Scores</h1>
+    </div>
+    <div class="space"></div>
+    <main>
+        <div id="scorecontain">
+            <div class="space"></div>
+            <div class="score" id="score0">
+                <div class="scorename">User 1</div>
+                <div class="scorenum">1234</div>
+            </div>
+            <div class="space"></div>
+            <div class="score" id="score1">
+                <div class="scorename">User 2</div>
+                <div class="scorenum">1234</div>
+            </div>
+            <div class="space"></div>
+            <div class="score" id="score2">
+                <div class="scorename">User 3</div>
+                <div class="scorenum">1234</div>
+            </div>
+            <div class="space"></div>
+            <div class="score" id="score3">
+                <div class="scorename">User 4</div>
+                <div class="scorenum">1234</div>
+            </div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <a id="returnbutton" href="./index.html">Return</a>
+        </div>
+
+    </main>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <script defer type="text/javascript">
+        async function main() {
+
+            let scores = localStorage.getItem("scores");
+            if (!scores) return;
+            let j = JSON.parse(scores);
+            if (!j) return;
+            for (let i = 0; i < Object.keys(j).length; i++) {
+                let s = document.querySelector("#score" + i);
+                console.log(s);
+                s.querySelector(".scorename").innerText = j["score" + i].name;
+                s.querySelector(".scorenum").innerText = j["score" + i].score;
+            }
+        }
+        main();
+       
+
+    </script>
+</body>
+
+</html>
