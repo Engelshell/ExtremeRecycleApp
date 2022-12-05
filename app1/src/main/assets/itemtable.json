@@ -7,7 +7,7 @@
     "items": {
         "trash": {
             "t0": {
-                "p": 100,
+                "p": 200,
                 "n": "Plastic Bag",
                 "src": "/assets/images/trash/bag.svg"
             },
@@ -34,39 +34,39 @@
                 "src": "/assets/images/recycle/can.svg"
             },
             "r1": {
-                "p": 100,
+                "p": 300,
                 "n": "Cardboard Box",
                 "src": "/assets/images/recycle/cardboard.svg"
             },
             "r2": {
-                "p": 100,
+                "p": 300,
                 "n": "Glass Jar",
                 "src": "/assets/images/recycle/glass.svg"
             },
             "r3": {
-                "p": 100,
+                "p":  50,
                 "n": "Paper",
                 "src": "/assets/images/recycle/paper.svg"
             },
             "r4": {
-                "p": 100,
+                "p": 200,
                 "n": "Yogurt Cup",
                 "src": "/assets/images/recycle/yogurt.svg"
             }
         },
         "food": {
             "f0": {
-                "p": 100,
+                "p": 300,
                 "n": "Apple",
                 "src": "/assets/images/food/apple.svg"
             },
             "f1": {
-                "p": 100,
+                "p": 150,
                 "n": "Bread",
                 "src": "/assets/images/food/bread.svg"
             },
             "f2": {
-                "p": 100,
+                "p": 200,
                 "n": "Cheese",
                 "src": "/assets/images/food/cheese.svg"
             },
